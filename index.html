@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+      try {
+        if (localStorage.getItem('lkl_theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+        }
+      } catch {}
+    </script>
+
+    <!-- SEO Core -->
+    <title>LKLCloud — Votre nouvel hébergeur français, haute performance</title>
+    <meta name="description" content="VPS ultra-rapides, serveurs de jeux anti-DDoS, hébergement web et applicatif. Infra 100% française, déploiement en 2 min, support 24/7. Dès 0,99€/mois. Rejoignez la nouvelle référence de l'hébergement français." />
+    <meta name="keywords" content="lklcloud, hébergeur français, vps, vps kvm, vps linux, serveur fivem, hébergement web france, cloud hosting, serveur minecraft, hébergement python, hébergement nodejs, anti-ddos, vps pas cher, serveur de jeux, hébergement nouvelle génération, infrastructure france, datacenter paris" />
+    <meta name="author" content="LKLCloud" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://lklcloud.fr/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lklcloud.fr/" />
+    <meta property="og:title" content="LKLCloud — Votre nouvel hébergeur français, haute performance" />
+    <meta property="og:description" content="VPS ultra-rapides, serveurs de jeux anti-DDoS, hébergement web et applicatif. Infra 100% française, déploiement en 2 min, support 24/7. Dès 0,99€/mois. Rejoignez la nouvelle référence de l'hébergement français." />
+    <meta property="og:image" content="https://lklcloud.fr/images/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LKLCloud — Votre nouvel hébergeur français, hautes performances, pensé en France" />
+    <meta property="og:site_name" content="LKLCloud" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LKLCloud — Votre nouvel hébergeur français, haute performance" />
+    <meta name="twitter:description" content="Le cloud français qui change les règles. VPS, web, gaming. Infra en France, support 24/7, anti-DDoS inclus. Dès 0,99€/mois." />
+    <meta name="twitter:image" content="https://lklcloud.fr/images/og.png" />
+    <meta name="twitter:image:alt" content="LKLCloud — Votre nouvel hébergeur français, haute performance, pensé en France" />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="/images/logos/favicon.ico" />
+  
+
+    <!-- Theme & PWA -->
+    <meta name="theme-color" content="#FF6A30" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LKLCloud" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="application-name" content="LKLCloud" />
+    <meta name="msapplication-TileColor" content="#FF6A30" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Geo targeting -->
+    <meta name="geo.region" content="FR" />
+    <meta name="geo.placename" content="France" />
+    <meta name="content-language" content="fr" />
+
+    <!-- Structured Data — Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LKLCloud",
+      "alternateName": "LKL Cloud",
+      "url": "https://lklcloud.fr",
+      "logo": "https://lklcloud.fr/images/logos/logo_b_color_cloud.png",
+      "description": "Votre nouvel hébergeur français, hautes performances, pensé en France. VPS haute performance, serveurs de jeux anti-DDoS, hébergement web et applicatif.",
+      "foundingDate": "2024",
+      "slogan": "Votre nouvel hébergeur français, haute performance",
+      "sameAs": [
+        "https://instagram.com/lklcloud",
+        "https://linkedin.com/company/lklcloud",
+        "https://discord.gg/lklcloud"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@lklcloud.fr",
+        "contactType": "customer service",
+        "availableLanguage": "French",
+        "areaServed": "FR"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+      },
+      "founder": [
+        { "@type": "Person", "name": "Kylian T.", "jobTitle": "Président" },
+        { "@type": "Person", "name": "Lorenzo S.", "jobTitle": "Vice-Président" },
+        { "@type": "Person", "name": "Maxime C.", "jobTitle": "Responsable Global" },
+        { "@type": "Person", "name": "Loeiz D.", "jobTitle": "Responsable Infrastructure" }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data — WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "LKLCloud",
+      "url": "https://lklcloud.fr",
+      "description": "Votre nouvel hébergeur français, haute performance, pensé en France. VPS, web, gaming.",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "LKLCloud",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lklcloud.fr/images/logos/logo_b_color_cloud.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Structured Data — Product offerings -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Solutions cloud LKLCloud",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "VPS KVM Linux — Dès 3,99€/mois",
+          "url": "https://lklcloud.fr/produits/vps-linux"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hébergement Web Plesk — Dès 2,99€/mois",
+          "url": "https://lklcloud.fr/produits/plesk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Serveur FiveM — Dès 0,99€/mois",
+          "url": "https://lklcloud.fr/produits/fivem"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Hébergement Python — Dès 1,99€/mois",
+          "url": "https://lklcloud.fr/produits/python"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Hébergement Node.js — Dès 1,99€/mois",
+          "url": "https://lklcloud.fr/produits/nodejs"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://lklcloud.fr" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <style>
+      /* ─── Critical CSS — loader (LKL 2026) ─── */
+      html, body { background: #FFFFFF; }
+      html.dark, html.dark body { background: #100D0B; }
+      body.loading { overflow: hidden; }
+      body.loading #root { opacity: 0; }
+
+      .loader-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        will-change: opacity, transform;
+      }
+      html.dark .loader-overlay { background: #100D0B; }
+
+      .loader-mark {
+        width: clamp(88px, 22vw, 140px);
+        opacity: 0;
+        transform: scale(0.92) translateY(8px);
+        animation: mark-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards,
+          mark-breathe 1.8s ease-in-out 0.65s infinite;
+      }
+      .loader-mark img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      @keyframes mark-in {
+        from { opacity: 0; transform: scale(0.92) translateY(8px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      @keyframes mark-breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.04); }
+      }
+
+      /* thin progress bar at the bottom */
+      .loader-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+      html.dark .loader-bar { background: rgba(244, 238, 231, 0.08); }
+      .loader-bar::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform-origin: left;
+        background: #FF6A30;
+        animation: bar-fill 2.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+      @keyframes bar-fill {
+        0% { transform: scaleX(0); }
+        70% { transform: scaleX(0.75); }
+        100% { transform: scaleX(0.97); }
+      }
+
+      /* Phase 1: mark + bar fade out */
+      .loader-overlay.phase-out .loader-mark,
+      .loader-overlay.phase-out .loader-bar {
+        opacity: 0;
+        transition: opacity 0.15s ease;
+      }
+      /* Phase 2: wipe the whole overlay upward */
+      .loader-overlay.phase-wipe {
+        animation: overlay-wipe 0.35s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+      }
+      @keyframes overlay-wipe {
+        from { transform: translateY(0); }
+        to { transform: translateY(-101%); }
+      }
+
+      body:not(.loading) #root {
+        animation: content-reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      @keyframes content-reveal {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .loader-mark, .loader-bar::after,
+        .loader-overlay.phase-wipe, body:not(.loading) #root { animation: none !important; }
+        .loader-mark { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body class="loading">
+    <!-- Loader -->
+    <div id="page-loader" class="loader-overlay">
+      <div class="loader-mark" aria-label="LKL Cloud">
+        <img src="/images/logos/mascot.png" alt="" />
+      </div>
+      <div class="loader-bar" aria-hidden="true"></div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function() {
+        var loader = document.getElementById('page-loader');
+        var minDisplay = 300;
+        var startTime = performance.now();
+        var dismissed = false;
+
+        function dismissLoader() {
+          if (dismissed || !loader) return;
+          dismissed = true;
+          var elapsed = performance.now() - startTime;
+          var remaining = Math.max(0, minDisplay - elapsed);
+
+          setTimeout(function() {
+            loader.classList.add('phase-out');
+            setTimeout(function() {
+              loader.classList.add('phase-wipe');
+              setTimeout(function() {
+                if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+                document.body.classList.remove('loading');
+                window.dispatchEvent(new Event('lkl-loader-dismissed'));
+              }, 350);
+            }, 150);
+          }, remaining);
+        }
+
+        window.addEventListener('load', dismissLoader);
+        setTimeout(dismissLoader, 2500);
+      })();
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          registrations.forEach(function(r) { r.unregister(); });
+        });
+        caches.keys().then(function(keys) {
+          keys.forEach(function(k) { caches.delete(k); });
+        });
+      }
+    </script>
+  </body>
+</html>

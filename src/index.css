@@ -1,0 +1,498 @@
+@import "tailwindcss";
+
+/* ─── Self-hosted Fonts ─────────────────────────────────────────────── */
+
+/* Satoshi — weight mapping shifted lighter */
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Italic.otf") format("opentype");
+  font-weight: 300 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-MediumItalic.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-BoldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Instrument Serif */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("https://lklcloud.fr/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("https://lklcloud.fr/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 2026 redesign — orange + white by default, with an optional dark mode
+   (orange + near-black). Every color below is a CSS custom property so the
+   whole site flips with a single `.dark` class on <html> — see the
+   override block right after this one. */
+
+@theme {
+  --font-sans: "Satoshi", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+
+  --color-primary: #FF6A30;
+  --color-primary-light: #FF8F5E;
+  --color-primary-dark: #E85A20;
+
+  /* Legacy neutral scale — original light-mode meaning restored. */
+  --color-neutral-lightest: #FAFAFA;
+  --color-neutral-light: #F5F5F5;
+  --color-neutral-gray: #E5E5E5;
+  --color-neutral-medium: #A3A3A3;   /* muted / secondary text */
+  --color-neutral-dark: #171717;     /* primary text + headings */
+
+  /* ── Surfaces (light default) ─────────────────────────────────── */
+  --color-paper: #FFFFFF;
+  --color-paper-deep: #F5F5F5;
+  --color-ink: #12100D;          /* fixed near-black accent — footer, final CTA, console. Does NOT flip with theme. */
+  --color-ink-soft: #211C17;     /* raised surface on ink — fixed, does NOT flip. */
+  --color-line: #E5E0DA;
+
+  --color-canvas: #FFFFFF;
+  --color-surface: #F7F5F3;
+  --color-surface-2: #EFEBE7;
+  --color-hairline: #E5E0DA;
+  --color-hairline-strong: #D6CFC6;
+  --color-text: #171717;
+  --color-text-dim: #5C554D;
+  --color-text-faint: #948C82;
+
+  /* Subtle tint overlays used for hover/active states and faint fills.
+     Dark-ink text at low opacity in light mode, warm-white at low opacity
+     in dark mode — see override block below. */
+  --color-tint-1: rgba(23, 19, 15, 0.035);
+  --color-tint-2: rgba(23, 19, 15, 0.06);
+  --color-tint-3: rgba(23, 19, 15, 0.09);
+
+  /* Line color for the faint technical grid/dots backdrop. */
+  --color-grid-line: rgba(23, 19, 15, 0.05);
+
+  /* Frosted glass panels (popups, modals, floating cards). */
+  --color-glass-bg: rgba(255, 255, 255, 0.70);
+  --color-glass-bg-strong: rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(23, 19, 15, 0.10);
+  --color-glass-border-strong: rgba(23, 19, 15, 0.14);
+}
+
+/* ── Dark mode override — same tokens, near-black ground ──────────── */
+:root.dark {
+  --color-neutral-lightest: #100D0B;
+  --color-neutral-light: #17130F;
+  --color-neutral-gray: #2B2521;
+  --color-neutral-medium: #968C81;
+  --color-neutral-dark: #F4EEE7;
+
+  --color-paper: #100D0B;
+  --color-paper-deep: #16120E;
+
+  --color-canvas: #100D0B;
+  --color-surface: #16120E;
+  --color-surface-2: #1E1913;
+  --color-hairline: #2B2521;
+  --color-hairline-strong: #3D3630;
+  --color-text: #F4EEE7;
+  --color-text-dim: #A79E93;
+  --color-text-faint: #6F675E;
+
+  --color-tint-1: rgba(244, 238, 231, 0.02);
+  --color-tint-2: rgba(244, 238, 231, 0.045);
+  --color-tint-3: rgba(244, 238, 231, 0.07);
+
+  --color-grid-line: rgba(244, 238, 231, 0.045);
+
+  --color-glass-bg: rgba(22, 18, 14, 0.62);
+  --color-glass-bg-strong: rgba(16, 13, 11, 0.82);
+  --color-glass-border: rgba(244, 238, 231, 0.08);
+  --color-glass-border-strong: rgba(244, 238, 231, 0.12);
+}
+
+:root {
+  color-scheme: light;
+}
+:root.dark {
+  color-scheme: dark;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+}
+
+/* Hide scrollbar up/down arrows */
+::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  ::selection {
+    background-color: rgba(255, 106, 48, 0.28);
+    color: #FFF3EC;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* ── 2026 redesign primitives ───────────────────────────────────── */
+
+  /* Fine film grain — sits in an absolutely-positioned layer */
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.055;
+    mix-blend-mode: overlay;
+  }
+
+  /* Contained warm light — a deliberate shape on the dark ground, not a wash */
+  .warm-glow {
+    background: radial-gradient(circle at center, rgba(255, 106, 48, 0.22), rgba(255, 106, 48, 0.05) 45%, transparent 68%);
+    filter: blur(24px);
+  }
+
+  /* Faint technical grid — hero / feature backdrops */
+  .tech-grid {
+    background-image:
+      linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .tech-dots {
+    background-image: radial-gradient(circle at 1px 1px, var(--color-grid-line) 1px, transparent 0);
+    background-size: 34px 34px;
+  }
+
+  /* Soft floating bubbles — friendlier backdrop, replaces the technical grid */
+  .bubble-field {
+    background-image:
+      radial-gradient(circle at 12% 22%, rgba(255, 106, 48, 0.14) 0%, transparent 60%),
+      radial-gradient(circle at 88% 12%, rgba(255, 106, 48, 0.10) 0%, transparent 55%),
+      radial-gradient(circle at 78% 78%, rgba(255, 106, 48, 0.09) 0%, transparent 50%),
+      radial-gradient(circle at 20% 82%, rgba(255, 106, 48, 0.08) 0%, transparent 48%),
+      radial-gradient(circle at 50% 45%, rgba(255, 106, 48, 0.05) 0%, transparent 65%);
+  }
+  .radial-fade {
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+  }
+
+  /* Hairline that fades at both ends */
+  .rule-fade {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-hairline) 12%, var(--color-hairline) 88%, transparent);
+  }
+
+  /* Editorial display type — big, tight, confident */
+  .display {
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Admin Live Preview: isolates public theme rendering inside admin panels */
+  .public-preview-container {
+    color: #171717;
+    font-family: 'Satoshi', 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .glass {
+    background: var(--color-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-glass-border);
+  }
+
+  .glass-strong {
+    background: var(--color-glass-bg-strong);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--color-glass-border-strong);
+  }
+
+  /* ── Buttons ───────────────────────────────────────────────────── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 30px -12px rgba(255, 106, 48, 0.5);
+  }
+  .btn-primary:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(244, 238, 231, 0.16);
+    color: var(--color-text);
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  .btn-ghost:hover {
+    border-color: rgba(244, 238, 231, 0.4);
+    background: rgba(244, 238, 231, 0.03);
+  }
+
+  /* ── Surface card ──────────────────────────────────────────────── */
+  .surface-card {
+    background: var(--color-tint-1);
+    border: 1px solid var(--color-hairline);
+    border-radius: 1rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .surface-card:hover {
+    border-color: var(--color-hairline-strong);
+    background: var(--color-tint-2);
+  }
+
+  .font-accent {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    padding-inline: 0.08em;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #FF6A30, #E85A20, #FF6A30);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 200% center; }
+  }
+
+  .text-shiny {
+    background: linear-gradient(
+      110deg,
+      #FF6A30 0%,
+      #FF6A30 38%,
+      #FF9E6E 46%,
+      #FFBF9A 50%,
+      #FF9E6E 54%,
+      #FF6A30 62%,
+      #FF6A30 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny-sweep 4s ease-in-out infinite;
+  }
+
+  @keyframes shiny-sweep {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  /* ── 2026 redesign: ambient loop animations retired ─────────────────
+     The classes are kept as no-ops so existing markup doesn't break, but
+     the site no longer breathes / glows / shimmers on a loop. Motion now
+     happens on scroll-in and on interaction only. */
+  .animate-float,
+  .animate-breathe,
+  .animate-breathe-slow,
+  .animate-breathe-glow,
+  .animate-pulse-orange,
+  .cta-pulse,
+  .card-idle-breathe,
+  .card-border-glow,
+  .shadow-dynamic {
+    animation: none;
+  }
+
+  .bg-breathe { position: relative; }
+  .cta-shimmer { position: relative; }
+
+  /* Skeleton shimmer animation */
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.04) 0%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.04) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
+
+/* ─── High Contrast Mode ────────────────────────────────────────────── */
+.high-contrast {
+  --color-neutral-medium: #666666;
+  --color-primary: #E85A20;
+}
+
+.high-contrast .glass,
+.high-contrast .glass-strong {
+  border-width: 2px;
+}
+
+/* ─── Font Size Modes ───────────────────────────────────────────────── */
+html.font-sm { font-size: 14px; }
+html.font-md { font-size: 16px; }
+html.font-lg { font-size: 18px; }
+
+/* ─── Focus Mode ────────────────────────────────────────────────────── */
+.focus-mode header,
+.focus-mode footer,
+.focus-mode [data-focus-hide] {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.focus-mode header:hover,
+.focus-mode footer:hover,
+.focus-mode [data-focus-hide]:hover {
+  opacity: 1;
+}
+
+
+/* ─── Print Styles ──────────────────────────────────────────────────── */
+@media print {
+  header, footer, nav,
+  [data-no-print],
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  body {
+    color: #000 !important;
+    background: #fff !important;
+    font-size: 12pt;
+  }
+
+  .glass, .glass-strong {
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    backdrop-filter: none !important;
+  }
+
+  .text-gradient {
+    -webkit-text-fill-color: #E85A20 !important;
+    background: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

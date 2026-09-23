@@ -1,0 +1,352 @@
+/* ═══════════════════════════════════════════════════════════════════
+   LKL Cloud — Admin Dashboard Theme System
+   CSS custom properties for dark/light mode toggle
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── Self-hosted Satoshi font ─────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Italic.otf") format("opentype");
+  font-weight: 300 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-MediumItalic.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-BoldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://lklcloud.fr/fonts/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Dark theme (default) ──────────────────────────────────────── */
+[data-admin-theme="dark"] {
+  --admin-bg:             #0A0A0A;
+  --admin-bg-elevated:    #111111;
+  --admin-bg-subtle:      #0E0E0E;
+  --admin-surface:        rgba(255, 255, 255, 0.04);
+  --admin-surface-hover:  rgba(255, 255, 255, 0.06);
+  --admin-surface-strong: rgba(255, 255, 255, 0.07);
+  --admin-border:         rgba(255, 255, 255, 0.08);
+  --admin-border-strong:  rgba(255, 255, 255, 0.12);
+  --admin-text-primary:   #FAFAFA;
+  --admin-text-secondary: #A3A3A3;
+  --admin-text-muted:     #525252;
+  --admin-text-inverted:  #0A0A0A;
+  --admin-primary:        #FF6A30;
+  --admin-primary-light:  #FF8F5E;
+  --admin-primary-dark:   #E85A20;
+  --admin-primary-glow:   rgba(255, 106, 48, 0.06);
+  --admin-primary-surface: rgba(255, 106, 48, 0.1);
+  --admin-success:        #22c55e;
+  --admin-success-light:  #4ade80;
+  --admin-success-surface: rgba(34, 197, 94, 0.1);
+  --admin-warning:        #f59e0b;
+  --admin-warning-light:  #fbbf24;
+  --admin-warning-surface: rgba(245, 158, 11, 0.1);
+  --admin-danger:         #ef4444;
+  --admin-danger-light:   #f87171;
+  --admin-danger-surface: rgba(239, 68, 68, 0.1);
+  --admin-info:           #06b6d4;
+  --admin-info-light:     #22d3ee;
+  --admin-info-surface:   rgba(6, 182, 212, 0.1);
+  --admin-overlay:        rgba(0, 0, 0, 0.75);
+  --admin-dialog-bg:      rgba(17, 17, 17, 0.97);
+  --admin-selection:      rgba(255, 106, 48, 0.25);
+  --admin-shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.3);
+  --admin-shadow:         0 4px 24px rgba(0, 0, 0, 0.3);
+  --admin-shadow-lg:      0 8px 40px rgba(0, 0, 0, 0.4);
+  --admin-input-bg:       rgba(255, 255, 255, 0.04);
+  --admin-input-border:   rgba(255, 255, 255, 0.08);
+  --admin-input-focus:    rgba(255, 106, 48, 0.3);
+  --admin-sidebar-bg:     rgba(0, 0, 0, 0.4);
+  --admin-topbar-bg:      rgba(10, 10, 10, 0.8);
+  --admin-mesh-1:         rgba(255, 106, 48, 0.03);
+  --admin-mesh-2:         rgba(59, 130, 246, 0.02);
+  --admin-mesh-3:         rgba(6, 182, 212, 0.015);
+}
+
+/* ─── Light theme ───────────────────────────────────────────────── */
+[data-admin-theme="light"] {
+  --admin-bg:             #F8F9FA;
+  --admin-bg-elevated:    #FFFFFF;
+  --admin-bg-subtle:      #F1F3F5;
+  --admin-surface:        rgba(0, 0, 0, 0.03);
+  --admin-surface-hover:  rgba(0, 0, 0, 0.05);
+  --admin-surface-strong: rgba(0, 0, 0, 0.06);
+  --admin-border:         rgba(0, 0, 0, 0.08);
+  --admin-border-strong:  rgba(0, 0, 0, 0.14);
+  --admin-text-primary:   #171717;
+  --admin-text-secondary: #525252;
+  --admin-text-muted:     #A3A3A3;
+  --admin-text-inverted:  #FAFAFA;
+  --admin-primary:        #FF6A30;
+  --admin-primary-light:  #FF8F5E;
+  --admin-primary-dark:   #E85A20;
+  --admin-primary-glow:   rgba(255, 106, 48, 0.08);
+  --admin-primary-surface: rgba(255, 106, 48, 0.08);
+  --admin-success:        #16a34a;
+  --admin-success-light:  #22c55e;
+  --admin-success-surface: rgba(22, 163, 74, 0.08);
+  --admin-warning:        #d97706;
+  --admin-warning-light:  #f59e0b;
+  --admin-warning-surface: rgba(217, 119, 6, 0.08);
+  --admin-danger:         #dc2626;
+  --admin-danger-light:   #ef4444;
+  --admin-danger-surface: rgba(220, 38, 38, 0.08);
+  --admin-info:           #0891b2;
+  --admin-info-light:     #06b6d4;
+  --admin-info-surface:   rgba(8, 145, 178, 0.08);
+  --admin-overlay:        rgba(0, 0, 0, 0.50);
+  --admin-dialog-bg:      rgba(255, 255, 255, 0.97);
+  --admin-selection:      rgba(255, 106, 48, 0.15);
+  --admin-shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.06);
+  --admin-shadow:         0 4px 24px rgba(0, 0, 0, 0.08);
+  --admin-shadow-lg:      0 8px 40px rgba(0, 0, 0, 0.12);
+  --admin-input-bg:       rgba(0, 0, 0, 0.02);
+  --admin-input-border:   rgba(0, 0, 0, 0.12);
+  --admin-input-focus:    rgba(255, 106, 48, 0.25);
+  --admin-sidebar-bg:     rgba(255, 255, 255, 0.85);
+  --admin-topbar-bg:      rgba(248, 249, 250, 0.85);
+  --admin-mesh-1:         rgba(255, 106, 48, 0.04);
+  --admin-mesh-2:         rgba(59, 130, 246, 0.03);
+  --admin-mesh-3:         rgba(6, 182, 212, 0.02);
+}
+
+/* ─── Root styles ───────────────────────────────────────────────── */
+.admin-root {
+  font-family: 'Satoshi', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--admin-bg);
+  color: var(--admin-text-primary);
+  min-height: 100vh;
+}
+
+/* Smooth theme transition */
+.admin-root,
+.admin-root *:not(.no-transition) {
+  transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mesh gradient background */
+.admin-root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 20%, var(--admin-mesh-1), transparent),
+    radial-gradient(ellipse 50% 50% at 90% 80%, var(--admin-mesh-2), transparent),
+    radial-gradient(ellipse 40% 30% at 50% 50%, var(--admin-mesh-3), transparent);
+}
+
+.admin-root ::selection {
+  background-color: var(--admin-selection);
+  color: var(--admin-text-primary);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────── */
+.admin-root ::-webkit-scrollbar { width: 6px; height: 6px; }
+.admin-root ::-webkit-scrollbar-track { background: transparent; }
+.admin-root ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--admin-primary), var(--admin-primary-dark));
+  border-radius: 999px;
+}
+.admin-root ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--admin-primary-light), var(--admin-primary));
+}
+
+/* ─── Glass surfaces ────────────────────────────────────────────── */
+.admin-glass {
+  background: var(--admin-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  box-shadow: 0 0 0 0.5px var(--admin-border), 0 2px 12px rgba(0,0,0,0.06);
+}
+.admin-glass-strong {
+  background: var(--admin-dialog-bg);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: none;
+  box-shadow: 0 0 0 0.5px var(--admin-border-strong), 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* ─── Dialog panel (opaque) ─────────────────────────────────────── */
+.admin-dialog-panel {
+  background: var(--admin-dialog-bg);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid var(--admin-border-strong);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 0 0.5px var(--admin-border);
+}
+
+/* Backward compat aliases */
+.glass-dark {
+  background: var(--admin-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  box-shadow: 0 0 0 0.5px var(--admin-border), 0 2px 12px rgba(0,0,0,0.06);
+}
+.glass-dark-strong {
+  background: var(--admin-surface-strong);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: none;
+  box-shadow: 0 0 0 0.5px var(--admin-border-strong), 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* ─── Card utilities ────────────────────────────────────────────── */
+.admin-card {
+  background: var(--admin-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  box-shadow: 0 0 0 0.5px var(--admin-border), 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.admin-card-hover {
+  transition: all 0.3s ease;
+}
+.admin-card-hover:hover {
+  background: var(--admin-surface-hover);
+  border-color: var(--admin-border-strong);
+  box-shadow: var(--admin-shadow-sm);
+}
+
+/* ─── Sidebar nav ───────────────────────────────────────────────── */
+.admin-nav-link { transition: all 0.2s ease; }
+.admin-nav-link:hover { background: var(--admin-surface-hover); }
+.admin-nav-link.active {
+  background: var(--admin-primary-surface);
+  color: var(--admin-primary);
+  border-left-color: var(--admin-primary);
+}
+
+/* ─── Nav section labels ────────────────────────────────────────── */
+.admin-nav-section {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--admin-text-muted);
+  padding: 0.5rem 1rem 0.125rem;
+}
+
+/* ─── Table ─────────────────────────────────────────────────────── */
+.admin-table-row { transition: background-color 0.15s ease; }
+.admin-table-row:hover { background: var(--admin-surface-hover) !important; }
+
+/* ─── Input styling ─────────────────────────────────────────────── */
+.admin-input {
+  background: var(--admin-input-bg);
+  border: 1px solid var(--admin-input-border);
+  color: var(--admin-text-primary);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+.admin-input:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 3px var(--admin-input-focus);
+}
+.admin-input::placeholder {
+  color: var(--admin-text-muted);
+}
+
+/* ─── Breathing glow ────────────────────────────────────────────── */
+@keyframes admin-breathe-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,106,48,0), 0 0 60px rgba(255,106,48,0); }
+  50% { box-shadow: 0 0 20px rgba(255,106,48,0.08), 0 0 60px rgba(255,106,48,0.04); }
+}
+.admin-glow { animation: admin-breathe-glow 5s ease-in-out infinite; }
+
+/* ─── Shimmer sweep ─────────────────────────────────────────────── */
+.admin-shimmer { position: relative; overflow: hidden; }
+.admin-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.15) 45%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.15) 55%, transparent 60%);
+  background-size: 200% 100%;
+  animation: admin-shimmer-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+}
+@keyframes admin-shimmer-sweep { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* ─── Skeleton loading ──────────────────────────────────────────── */
+.admin-skeleton {
+  background: linear-gradient(90deg, var(--admin-surface) 25%, var(--admin-surface-hover) 50%, var(--admin-surface) 75%);
+  background-size: 200% 100%;
+  animation: admin-skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: 0.5rem;
+}
+@keyframes admin-skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* ─── Sync pulse ────────────────────────────────────────────────── */
+@keyframes sync-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.sync-pending { animation: sync-pulse 2s ease-in-out infinite; }
+
+/* ─── Gradient text ─────────────────────────────────────────────── */
+.admin-gradient-text {
+  background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Focus ring ────────────────────────────────────────────────── */
+.admin-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--admin-bg), 0 0 0 4px var(--admin-primary);
+}
+
+/* ─── Badge pulse (for live indicators) ─────────────────────────── */
+@keyframes admin-pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+.admin-pulse-dot {
+  animation: admin-pulse-dot 2s ease-in-out infinite;
+}
