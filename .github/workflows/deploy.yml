@@ -1,0 +1,35 @@
+name: Deploy to lklcloud.fr
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      - name: Deploy dist/ to production
+        run: |
+          cd dist
+          git init -q -b main
+          git -c user.email="ci@lklcloud.fr" -c user.name="GitHub Actions" add -A
+          git -c user.email="ci@lklcloud.fr" -c user.name="GitHub Actions" commit -q -m "deploy ${{ github.sha }}" --allow-empty
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy_key -o UserKnownHostsFile=~/.ssh/known_hosts" \
+            git push --force ssh://deploy@83.150.218.32/home/deploy/site.git main
