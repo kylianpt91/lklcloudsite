@@ -9,7 +9,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          Les présentes Conditions Générales de Vente (ci-après « CGV ») définissent les droits et obligations de l'association LKL CLOUD (ci-après « le Prestataire ») et de ses clients (ci-après « le Client ») dans le cadre de la vente de services d'hébergement web, de serveurs privés virtuels (VPS), de serveurs de jeux et de services associés proposés sur le site <strong>lklcloud.fr</strong>.
+          Les présentes Conditions Générales de Vente (ci-après « CGV ») définissent les droits et obligations de l'association LKL CLOUD (ci-après « le Prestataire ») et de ses clients (ci-après « le Client ») dans le cadre de la vente de services d'hébergement web, de serveurs privés virtuels (VPS) et de services associés proposés sur le site <strong>lklcloud.fr</strong>.
         </p>
         <p>
           Toute commande de services implique l'acceptation sans réserve par le Client des présentes CGV. Ces conditions prévalent sur tout autre document du Client, sauf dérogation formelle et écrite du Prestataire. Le Prestataire se réserve le droit de modifier les présentes CGV à tout moment ; les conditions applicables sont celles en vigueur à la date de la commande.

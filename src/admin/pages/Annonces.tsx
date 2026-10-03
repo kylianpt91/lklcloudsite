@@ -163,7 +163,7 @@ export default function Annonces() {
                 <AdminTextarea label="Message" required value={form.message} onChange={e => setForm(prev => ({ ...prev, message: e.target.value }))} placeholder="Découvrez nos nouvelles offres VPS..." rows={3} error={errors.message} />
                 <AdminInput label="Lien : texte" value={form.linkText} onChange={e => setForm(prev => ({ ...prev, linkText: e.target.value }))} placeholder="En savoir plus" />
                 <AdminDropdown label="Lien : action" value={form.linkAction} onChange={val => setForm(prev => ({ ...prev, linkAction: val, customUrl: val !== 'custom' ? '' : prev.customUrl }))} options={linkActionOptions} />
-                {form.linkAction === 'custom' && <AdminInput label="URL personnalisée" required value={form.customUrl} onChange={e => setForm(prev => ({ ...prev, customUrl: e.target.value }))} placeholder="https://client.lklcloud.fr/store/vps" error={errors.customUrl} />}
+                {form.linkAction === 'custom' && <AdminInput label="URL personnalisée" required value={form.customUrl} onChange={e => setForm(prev => ({ ...prev, customUrl: e.target.value }))} placeholder="https://clients.lklcloud.fr/commander/vps-linux" error={errors.customUrl} />}
               </div>
             </div>
             <div>

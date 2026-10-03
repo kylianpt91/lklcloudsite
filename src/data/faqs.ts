@@ -4,7 +4,7 @@ export const generalFaqs: FAQ[] = [
   {
     question: "Qu'est-ce que LKLCloud ?",
     answer:
-      "LKLCloud est un hébergeur français fondé en décembre 2025, par deux jeunes étudiants, qui est spécialisé dans les serveurs VPS, l'hébergement web et l'hébergement de bots Discord (Node.js, Python). Notre infrastructure est hébergée à Paris et nous vous proposons une connexion ultra-rapide sur l'ensemble de nos offres.",
+      "LKLCloud est un hébergeur français fondé en décembre 2025 par Kylian, qui est spécialisé dans les serveurs VPS, l'hébergement web et l'hébergement de bots Discord (Node.js, Python). Notre infrastructure est hébergée à Paris et nous vous proposons une connexion ultra-rapide sur l'ensemble de nos offres.",
   },
   {
     question: 'Où sont situés vos serveurs ?',

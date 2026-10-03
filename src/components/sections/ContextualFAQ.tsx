@@ -26,11 +26,6 @@ const productFaqs = [
     answer:
       'Nous proposons une large gamme de distributions Linux (Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux) et Windows Server (2019, 2022). Vous pouvez également importer votre propre ISO.',
   },
-  {
-    question: 'Les serveurs de jeux incluent-ils des mods ?',
-    answer:
-      'Oui, tous nos serveurs de jeux supportent l\'installation de mods et plugins. Pour Minecraft, nous supportons Spigot, Paper, Forge, Fabric et BungeeCord. Notre support peut vous aider à configurer vos mods.',
-  },
 ]
 
 const pricingFaqs = [
