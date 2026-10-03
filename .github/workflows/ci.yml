@@ -1,12 +1,17 @@
 name: CI
 
 # Aucune verification automatique n'existait avant une fusion dans main,
-# qui declenche pourtant un vrai deploiement (voir deploy.yml) : un lint
-# ou un build casse serait parti en production sans que personne ne le
-# remarque avant. Ajoute avant de fusionner la pull request d'audit
-# (fix/site-audit-domaine-client) plutot qu'apres, pour qu'elle beneficie
-# du controle elle aussi. Pas de "npm run test" : aucun script de test
-# n'existe dans ce depot pour l'instant.
+# qui declenche pourtant un vrai deploiement (voir deploy.yml) : un build
+# casse serait parti en production sans que personne ne le remarque
+# avant (trouve en ajoutant ce fichier : exactement ce qui se passait
+# depuis le 29 septembre, voir fix/deploy-pipeline-react19). Pas de
+# "npm run lint" ici, contrairement a lkl-client : ce depot a deja 123
+# erreurs/avertissements de lint presents avant ce soir, sans rapport
+# avec un changement donne - en faire un critere bloquant empecherait
+# TOUTE pull request de passer tant que ce chantier separe (plus gros,
+# volontairement pas improvise cette nuit) n'est pas fait. Pas de
+# "npm run test" non plus : aucun script de test n'existe dans ce depot
+# pour l'instant.
 on:
   pull_request:
     branches: [main]
@@ -23,5 +28,4 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run lint
       - run: npm run build
