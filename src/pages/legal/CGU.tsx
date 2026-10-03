@@ -26,7 +26,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          L'association LKL CLOUD met à disposition de ses utilisateurs une plateforme de services d'hébergement web, de serveurs privés virtuels (VPS), d'hébergement d'applications et de serveurs de jeux. Ces services sont accessibles via le site lklcloud.fr et l'espace client disponible à l'adresse <a href="https://client.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">client.lklcloud.fr</a>.
+          L'association LKL CLOUD met à disposition de ses utilisateurs une plateforme de services d'hébergement web, de serveurs privés virtuels (VPS), d'hébergement d'applications et de serveurs de jeux. Ces services sont accessibles via le site lklcloud.fr et l'espace client disponible à l'adresse <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>.
         </p>
         <p>
           Les services comprennent la mise à disposition de ressources informatiques (calcul, stockage, réseau), la gestion technique de l'infrastructure sous-jacente, le support technique, ainsi que l'accès à des outils de gestion via l'espace client.
@@ -43,7 +43,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          L'accès à certains services nécessite la création d'un compte utilisateur sur la plateforme <a href="https://client.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">client.lklcloud.fr</a>. L'utilisateur s'engage à fournir des informations exactes, complètes et à jour lors de son inscription. Toute information erronée ou incomplète pourra entraîner la suspension ou la suppression du compte.
+          L'accès à certains services nécessite la création d'un compte utilisateur sur la plateforme <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>. L'utilisateur s'engage à fournir des informations exactes, complètes et à jour lors de son inscription. Toute information erronée ou incomplète pourra entraîner la suspension ou la suppression du compte.
         </p>
         <p>
           L'utilisateur est seul responsable de la confidentialité de ses identifiants de connexion (adresse e-mail et mot de passe). Il s'engage à ne pas divulguer ces informations à des tiers et à informer immédiatement LKL CLOUD de toute utilisation non autorisée de son compte ou de toute atteinte à sa sécurité.
@@ -199,7 +199,7 @@ const sections: LegalSection[] = [
           15 Route de Gif<br />
           91190 Villiers-le-Bâcle, France<br />
           E-mail : <a href="mailto:support@lklcloud.fr" className="text-primary hover:underline">support@lklcloud.fr</a><br />
-          Espace client : <a href="https://client.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">client.lklcloud.fr</a>
+          Espace client : <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>
         </p>
       </>
     ),

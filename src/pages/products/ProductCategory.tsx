@@ -243,7 +243,7 @@ export default function ProductCategory() {
                   Nous contacter
                 </a>
                 <a
-                  href="https://client.lklcloud.fr"
+                  href="https://clients.lklcloud.fr"
                   className="inline-flex items-center gap-2 border border-hairline text-text px-6 py-3.5 text-sm rounded-xl font-semibold hover:border-hairline-strong transition-colors duration-300"
                 >
                   Espace client

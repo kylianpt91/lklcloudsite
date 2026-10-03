@@ -43,7 +43,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          Le Prestataire propose des services d'hébergement web mutualisé, de serveurs privés virtuels (VPS) KVM sous Linux, d'hébergement d'applications Python et Node.js, ainsi que de serveurs de jeux (FiveM, Minecraft, Garry's Mod, ARK, Rust, Hytale). D'autres gammes de services (VPS Windows, VPS Game) seront proposées ultérieurement.
+          Le Prestataire propose des services d'hébergement web mutualisé, de serveurs privés virtuels (VPS) KVM sous Linux, et d'hébergement d'applications Python et Node.js. D'autres gammes de services (VPS Windows, noms de domaine) seront proposées ultérieurement.
         </p>
         <p>
           Les caractéristiques essentielles des services (ressources allouées, spécifications techniques, tarifs) sont décrites sur les pages produits du site lklcloud.fr. Le Prestataire s'engage à fournir les services conformément aux spécifications techniques indiquées dans l'offre souscrite par le Client.
@@ -60,7 +60,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          Le Client passe commande via l'espace client accessible à l'adresse <a href="https://client.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">client.lklcloud.fr</a>. La commande n'est définitivement confirmée qu'après acceptation du paiement par le prestataire de paiement et envoi d'un e-mail de confirmation au Client.
+          Le Client passe commande via l'espace client accessible à l'adresse <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>. La commande n'est définitivement confirmée qu'après acceptation du paiement par le prestataire de paiement et envoi d'un e-mail de confirmation au Client.
         </p>
         <p>
           Le Client garantit l'exactitude des informations fournies lors de la commande (identité, coordonnées, adresse e-mail). Toute commande passée sur la base d'informations erronées pourra être annulée par le Prestataire.
@@ -128,7 +128,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          Le Client peut résilier ses services à tout moment depuis son espace client sur <a href="https://client.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">client.lklcloud.fr</a>. La résiliation prend effet à la fin de la période de facturation en cours. Aucun remboursement au prorata ne sera effectué pour la période restante, sauf dans le cadre du droit de rétractation prévu à l'article 6.
+          Le Client peut résilier ses services à tout moment depuis son espace client sur <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>. La résiliation prend effet à la fin de la période de facturation en cours. Aucun remboursement au prorata ne sera effectué pour la période restante, sauf dans le cadre du droit de rétractation prévu à l'article 6.
         </p>
         <p>
           Le Prestataire peut résilier les services de plein droit en cas de manquement grave du Client à ses obligations, notamment en cas de non-paiement, d'utilisation abusive des ressources ou de violation des présentes CGV ou des <Link to="/cgu" className="text-primary hover:underline">Conditions Générales d'Utilisation</Link>. Le Client sera informé par e-mail et disposera d'un délai de 7 jours pour régulariser sa situation avant la suspension définitive des services.

@@ -142,7 +142,7 @@ export default function ComparisonTable({ plans }: ComparisonTableProps) {
                   ].join(' ')}
                 >
                   <a
-                    href={plan.orderUrl ?? 'https://client.lklcloud.fr/register.php'}
+                    href={plan.orderUrl ?? 'https://clients.lklcloud.fr/commander'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={[

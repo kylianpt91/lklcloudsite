@@ -106,11 +106,11 @@ export default function Parametres() {
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-10 h-10 rounded-2xl bg-[#06b6d4]/10 flex items-center justify-center"><Link size={18} className="text-[#06b6d4]" /></div>
                 <div>
-                  <h3 className="text-sm font-bold text-[var(--admin-text-primary)]">Espace Client (WHMCS)</h3>
+                  <h3 className="text-sm font-bold text-[var(--admin-text-primary)]">Espace Client</h3>
                   <p className="text-xs text-[var(--admin-text-muted)]">URL de base de votre espace client</p>
                 </div>
               </div>
-              <AdminInput label="URL de base WHMCS" value={form.whmcsBaseUrl} onChange={e => setForm(prev => ({ ...prev, whmcsBaseUrl: e.target.value }))} placeholder="https://client.lklcloud.fr" />
+              <AdminInput label="URL de base de l'espace client" value={form.whmcsBaseUrl} onChange={e => setForm(prev => ({ ...prev, whmcsBaseUrl: e.target.value }))} placeholder="https://clients.lklcloud.fr" />
             </SpotlightCard>
           </div>
         </div>
