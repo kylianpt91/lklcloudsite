@@ -41,6 +41,18 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Tarifs et contact -->
+  <url>
+    <loc>https://lklcloud.fr/tarifs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lklcloud.fr/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Pages legales -->
   <url>
     <loc>https://lklcloud.fr/mentions-legales</loc>
