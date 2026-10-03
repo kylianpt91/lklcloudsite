@@ -32,7 +32,7 @@ export default function PricingCard({
   badge,
   specs,
   ctaText = 'Commander',
-  ctaLink = 'https://client.lklcloud.fr/register.php',
+  ctaLink = 'https://clients.lklcloud.fr/commander',
   originalPrice,
   originalPriceQuarterly,
   originalPriceYearly,

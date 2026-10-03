@@ -7,6 +7,7 @@ import Footer from './Footer'
 import ScrollProgress from '@/components/ui/ScrollProgress'
 import BackToTop from '@/components/ui/BackToTop'
 import QuickActions from '@/components/ui/QuickActions'
+import CookieConsent from '@/components/ui/CookieConsent'
 import { NotificationContainer } from '@/contexts/NotificationContext'
 import { PrintStyles } from '@/components/ui/PrintStyles'
 import { useBridgeMaintenance } from '@/hooks/useBridge'
@@ -91,7 +92,7 @@ export default function Layout() {
                 Nous contacter
               </a>
               <a
-                href="https://client.lklcloud.fr"
+                href="https://clients.lklcloud.fr"
                 className="btn-ghost"
               >
                 Espace Client
@@ -125,6 +126,7 @@ export default function Layout() {
       <QuickActions />
       <NotificationContainer />
       <PrintStyles />
+      <CookieConsent />
     </div>
   )
 }
