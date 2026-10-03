@@ -1,0 +1,27 @@
+name: CI
+
+# Aucune verification automatique n'existait avant une fusion dans main,
+# qui declenche pourtant un vrai deploiement (voir deploy.yml) : un lint
+# ou un build casse serait parti en production sans que personne ne le
+# remarque avant. Ajoute avant de fusionner la pull request d'audit
+# (fix/site-audit-domaine-client) plutot qu'apres, pour qu'elle beneficie
+# du controle elle aussi. Pas de "npm run test" : aucun script de test
+# n'existe dans ce depot pour l'instant.
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
