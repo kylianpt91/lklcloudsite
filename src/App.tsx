@@ -10,6 +10,8 @@ import AuthGuard from '@/admin/components/AuthGuard'
 
 const Home = lazy(() => import('@/pages/Home'))
 const ProductCategory = lazy(() => import('@/pages/products/ProductCategory'))
+const Tarifs = lazy(() => import('@/pages/Tarifs'))
+const Contact = lazy(() => import('@/pages/Contact'))
 
 const MentionsLegales = lazy(() => import('@/pages/legal/MentionsLegales'))
 const CGV = lazy(() => import('@/pages/legal/CGV'))
@@ -86,6 +88,8 @@ export default function App() {
             <Route element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="produits/:category" element={<ProductCategory />} />
+              <Route path="tarifs" element={<Tarifs />} />
+              <Route path="contact" element={<Contact />} />
               <Route path="mentions-legales" element={<MentionsLegales />} />
               <Route path="cgv" element={<CGV />} />
               <Route path="cgu" element={<CGU />} />
