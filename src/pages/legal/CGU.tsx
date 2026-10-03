@@ -26,7 +26,7 @@ const sections: LegalSection[] = [
     content: (
       <>
         <p>
-          L'association LKL CLOUD met à disposition de ses utilisateurs une plateforme de services d'hébergement web, de serveurs privés virtuels (VPS), d'hébergement d'applications et de serveurs de jeux. Ces services sont accessibles via le site lklcloud.fr et l'espace client disponible à l'adresse <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>.
+          L'association LKL CLOUD met à disposition de ses utilisateurs une plateforme de services d'hébergement web, de serveurs privés virtuels (VPS) et d'hébergement d'applications. Ces services sont accessibles via le site lklcloud.fr et l'espace client disponible à l'adresse <a href="https://clients.lklcloud.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">clients.lklcloud.fr</a>.
         </p>
         <p>
           Les services comprennent la mise à disposition de ressources informatiques (calcul, stockage, réseau), la gestion technique de l'infrastructure sous-jacente, le support technique, ainsi que l'accès à des outils de gestion via l'espace client.
